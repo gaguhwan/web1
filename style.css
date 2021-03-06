@@ -1,0 +1,44 @@
+body {
+    margin:0;
+}
+#active {
+    color:red;
+}
+a {
+    color:black;
+    text-decoration: none;
+}
+h1 {
+    font-size:45px;
+    text-align:center;
+    border-bottom:1px solid gray;/*박스의 아래쪽 줄만 사용*/
+    margin:0;
+    padding:20px;
+}
+ol {
+    border-right:1px solid gray;
+    width:100px;/*block level element 이므로 오른쪽 끝에 줄이 생성되므로 간격을 줄인다*/
+    margin:0;/*줄과 줄 사이의 여백을 없앰*/
+    padding:20px;
+}
+#grid {
+    display:grid;
+    grid-template-columns: 150px 1fr;
+}
+#grid ol {/*모든 ol 중 id가 grid인 ol만 해당*/
+    padding-left: 33px;
+}
+#article {
+    padding-left: 25px;
+}
+@media(max-width:800px){
+    #grid {
+    display:block;/*기존의 grid를 block 형태로 바꿈*/
+}
+ol {
+    border-right:none; /*목록 옆의 선을 없앰*/
+}
+h1 {
+    border-bottom:none;/*제목과 본문 사이의 선을 없앰*/
+}
+}
